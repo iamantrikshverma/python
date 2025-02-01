@@ -31,4 +31,4 @@ elif c == '4':
     else:
         print("undefined")
 else:
-    print("Invalid option")
+    print("Invalid   option")
