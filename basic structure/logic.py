@@ -92,17 +92,20 @@ while k < 7:
             ch += 1
         j += 1
     j=0
+    temp = []
     while m < 7:
         if (m + k) < 6:
             print(" ", end="")
         else:
             if h > ord("Z"):
-                print(" ", end="")
+                # print(" ", end="")
+                temp.append(' ')
             else:
-                print(chr(h),end="")
+                # print(chr(h),end="")
+                temp.append(chr(h))
             
-            h += 1
-        m += 1
+                h += 1
+        m += 1    
+    print("".join(temp[:: -1]))    
     m=0
-    print()
     k += 1
