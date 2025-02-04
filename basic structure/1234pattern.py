@@ -31,4 +31,6 @@ for i in range(3):
             print(" ", end=" ")
         else:
             print("*", end=" ")
-    print()        
+    print()   
+
+print("me')
