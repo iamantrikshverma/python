@@ -18,7 +18,7 @@ print("option 2: sub numbers ")
 print("option 3: mul numbers ") 
 print("option 4: div numbers ")   
 
-c = input("your option ?")
+c = input("your option ?") # asking user input
 if c == '1':
     print(a + b)
 elif c == '2':
