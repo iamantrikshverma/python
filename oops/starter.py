@@ -32,6 +32,12 @@ print(sum.add())
 print(sum.addition(9))
 print(sum)
 
-    
+sum2 = abc(4,5)    # new object is not equal to old object
+print(sum == sum2)  
+
+print(sum is sum2)  # False, False
+
+sum3 = sum
+print(sum is sum3)  # True, True
         
  
