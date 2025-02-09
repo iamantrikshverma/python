@@ -79,7 +79,7 @@ class Employee_Management_system:
     
     def run(self):
         while True:
-            print("Employee Management System")
+            print("Employee_Management_System")
             print("1. Add a new employee")
             print("2. Delete an employee")
             print("3. Display all employees")
