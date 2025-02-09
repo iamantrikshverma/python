@@ -123,6 +123,7 @@ class Employee_Management_system:
                             self.employees.deleteEmployee(employee_id)
                             print("Employee deleted successfully!")
                         else:
+                            print("Employee ID does not exist.")
                 else:
                     print("Invalid employee ID. Please enter a number.")
                             
