@@ -10,8 +10,10 @@ class Employee:
 
 # Implement a linked list to store Employee objects.
 class Node:
-    def __init__(self, data=None):
+    def __init__(self, data=None, data1 = None):
+        self.pre = None
         self.data = data
+        self.data1 = data1
         self.next = None
 
 
@@ -37,21 +39,23 @@ class EmployeeLinkedList:
             while current.next:
                 current = current.next
             current.next = new_node
+            new_node.pre = current
         self.saveEmployeeData()    
             
 
     def deleteEmployee(self, employeeID):
         current = self.start
-        previous = None
+        # previous = None
         while current:
             if current.data.employee_id == employeeID:
-                if previous:
-                    previous.next = current.next
+                if current.pre:
+                    current.pre.next = current.next
+                    current.next.pre = current.pre
                     
                 else:
                     self.start = current.next
                 self.saveEmployeeData()
-            previous = current
+            current.pre = current
             current = current.next
         
         
