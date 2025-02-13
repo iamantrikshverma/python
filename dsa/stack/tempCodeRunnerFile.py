@@ -1,0 +1,1 @@
+printStack(s1.stack)
