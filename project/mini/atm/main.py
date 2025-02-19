@@ -16,37 +16,45 @@ def main(our_bank):
             print("MANAGER")
             print()
             manager_password = input("Enter Password: ")
-            if manager_password == "1234":
-                print("MANAGER ACCESS GRANTED")
-                print()
-                while True:
-                    print("Choose an option: ")
-                    print("1. Issue a new ATM!")
-                    print("2. Update Atm number!")
-                    print("3. Delete an ATM!")
-                    print("4. Check Balance!")
-                    print("5. Check total Balance in Bank!")
-                    print("6. Logout!")
+            with open("password.txt", "r") as f:
+                password = f.read().strip()
+                # print(password)
+                # print(manager_password)
+            
+                if manager_password == password:
+                    print("MANAGER ACCESS GRANTED")
                     print()
-                    manager_choice = input("Enter your choice: ")
-                    if manager_choice == "1":
-                        our_bank.issue_new_atm()
-                    elif manager_choice == "2":
-                        our_bank.update_atm_num()
-                    elif manager_choice == "3":
-                        our_bank.block_atm()
-                    elif manager_choice == "4":
-                        our_bank.check_atm_balance()
-                    elif manager_choice == "5":
-                        our_bank.total_balance_in_bank()
-                    elif manager_choice == "6":
-                        print("Logout successfully!")
-                        break
-                    else:
-                        print("Invalid choice!")
-                        break
-            else:
-                print("Invalid Password!")
+                    while True:
+                        print("Choose an option: ")
+                        print("1. Issue a new ATM!")
+                        print("2. Update Atm number!")
+                        print("3. Delete an ATM!")
+                        print("4. Check Balance!")
+                        print("5. Check total Balance in Bank!")
+                        print("6. Update Manager Password!")
+                        print("7. Logout!")
+                        print()
+                        manager_choice = input("Enter your choice: ")
+                        if manager_choice == "1":
+                            our_bank.issue_new_atm()
+                        elif manager_choice == "2":
+                            our_bank.update_atm_num()
+                        elif manager_choice == "3":
+                            our_bank.block_atm()
+                        elif manager_choice == "4":
+                            our_bank.check_atm_balance()
+                        elif manager_choice == "5":
+                            our_bank.total_balance_in_bank()
+                        elif manager_choice == "6":
+                            our_bank.change_password() 
+                        elif manager_choice == "7":
+                            print("Logout successfully!")
+                            break
+                        else:
+                            print("Invalid choice!")
+                            break
+                else:
+                    print("Invalid Password!")
         elif choice == "2":
             print("CUSTOMER")
             print()

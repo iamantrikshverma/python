@@ -2,6 +2,8 @@ class atm:
     def __init__(self,atm_num = 1,atm_pin = None,acount_balance = 0):
         self.atm_num = atm_num
         self.atm_pin = atm_pin
+        if atm_pin is not None:
+            self.atm_pin = int(atm_pin)
         self.acount_balance = acount_balance
         
     def generate_pin(self):
@@ -12,7 +14,6 @@ class atm:
         while len(user_input) != 4:
             user_input = input("Invalid input. Please enter 4 digits pin: ")
         self.atm_pin = int(user_input)
-        print("ATM Pin generated successfully!...")
         
     def withdraw_balance(self):
         pin = input("Enter 4 digit pin: ")
@@ -51,7 +52,7 @@ class atm:
         while not user_input.replace('.', '', 1).isdigit():
             user_input = input("Invalid input. Please enter amount to deposit: ")
         self.acount_balance += float(user_input)
-        print("Deposit successful")
+        # print("Deposit successful")
         
     def check_balance(self):
         pin = input("Enter 4 digit pin: ")
@@ -67,7 +68,7 @@ class atm:
         
         print(f"Your current balance is: {self.acount_balance}")
         
-    # getter and setters
+    # getter and setters 
     
     def get_atm_num(self):
         return self.atm_num
@@ -78,6 +79,9 @@ class atm:
     def get_atm_balance(self):
         return self.acount_balance
     
+    def get_atm_pin(self):
+        return self.atm_pin
+    
     # str method
     def __str__(self):
-        return f"ATM Number: {self.atm_num}, ATM Pin: {self.atm_pin}"
+        return f"{self.atm_num},{self.atm_pin},{self.acount_balance}"
