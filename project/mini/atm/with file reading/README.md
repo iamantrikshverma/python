@@ -94,7 +94,7 @@ Choose an option:
 - `password.txt` stores the manager password.
 
 ## Explanation
-https://youtu.be/sYDN-Gh4uNc
+https://youtu.be/LOoSlt8zkAs
 
 
 
