@@ -45,3 +45,6 @@ Ensure you have Python and SQLite installed on your system to run this project.
 
 - The system is designed for educational purposes and may not include all security features required for a production environment.
 - Make sure to update the manager password after the initial setup to ensure security.
+
+## Explanation
+https://youtu.be/LOoSlt8zkAs
