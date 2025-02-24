@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2 class="mb-4">Manager Dashboard</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Issue New ATM</h5>
+                    <form method="POST">
+                        <input type="hidden" name="action" value="issue_atm">
+                        <div class="mb-3">
+                            <input type="password" name="atm_number" class="form-control" placeholder="Enter ATM number" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Issue</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Update ATM Number</h5>
+                    <form method="POST">
+                        <input type="hidden" name="action" value="update_atm">
+                        <div class="mb-3">
+                            <input type="password" name="old_number" class="form-control" placeholder="Old ATM number" required>
+                            <input type="password" name="new_number" class="form-control mt-2" placeholder="New ATM number" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Block ATM</h5>
+                    <form method="POST">
+                        <input type="hidden" name="action" value="block_atm">
+                        <div class="mb-3">
+                            <input type="password" name="atm_number" class="form-control" placeholder="Enter ATM number" required>
+                        </div>
+                        <button type="submit" class="btn btn-danger w-100">Block</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Check Balance</h5>
+                    <form method="POST">
+                        <input type="hidden" name="action" value="check_balance">
+                        <div class="mb-3">
+                            <input type="password" name="atm_number" class="form-control" placeholder="Enter ATM number" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Check</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Total Bank Balance</h5>
+                    <form method="POST">
+                        <input type="hidden" name="action" value="total_balance">
+                        <button type="submit" class="btn btn-primary w-100">Check Total</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Update Password</h5>
+                    <form method="POST">
+                        <input type="hidden" name="action" value="update_password">
+                        <div class="mb-3">
+                            <input type="password" name="new_password" class="form-control" placeholder="New password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm mt-5">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Login</h2>
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label for="user_type" class="form-label">User Type</label>
+                            <select name="user_type" id="user_type" class="form-select">
+                                <option value="manager">Manager</option>
+                                <option value="customer">Customer</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password/ATM Number</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Enter password or ATM number" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
