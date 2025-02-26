@@ -7,7 +7,7 @@ class atm:
         self.acount_balance = acount_balance
         
     def generate_pin(self):
-        user_input = input("Enter 4 digits pin: ")
+        user_input = input("Enter 4 digits pin:  ")
         while not user_input.isdigit():
             user_input = input("Invalid input. Please enter 4 digits pin: ")
     
